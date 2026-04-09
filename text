@@ -1,0 +1,240 @@
+тут что то да и получилось. ПРоанализировав футпринты показали хорошие результаты ! Спасиьо ) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[ 437/447] 2026-03-13 ... готово (0.8s)   свечей всего: 4h: 2622  6h: 1748  12h:  874  24h:  437
+[ 438/447] 2026-03-14 ... готово (0.3s)   свечей всего: 4h: 2628  6h: 1752  12h:  876  24h:  438
+[ 439/447] 2026-03-15 ... готово (0.5s)   свечей всего: 4h: 2634  6h: 1756  12h:  878  24h:  439
+[ 440/447] 2026-03-16 ... готово (0.8s)   свечей всего: 4h: 2640  6h: 1760  12h:  880  24h:  440
+[ 441/447] 2026-03-17 ... готово (0.7s)   свечей всего: 4h: 2646  6h: 1764  12h:  882  24h:  441
+[ 442/447] 2026-03-18 ... готово (0.6s)   свечей всего: 4h: 2652  6h: 1768  12h:  884  24h:  442
+[ 443/447] 2026-03-19 ... готово (0.7s)   свечей всего: 4h: 2658  6h: 1772  12h:  886  24h:  443
+[ 444/447] 2026-03-20 ... готово (0.6s)   свечей всего: 4h: 2664  6h: 1776  12h:  888  24h:  444
+[ 445/447] 2026-03-21 ... готово (0.3s)   свечей всего: 4h: 2670  6h: 1780  12h:  890  24h:  445
+[ 446/447] 2026-03-22 ... готово (0.5s)   свечей всего: 4h: 2676  6h: 1784  12h:  892  24h:  446
+[ 447/447] 2026-03-23 ... готово (1.0s)   свечей всего: 4h: 2682  6h: 1788  12h:  894  24h:  447
+
+Итог по свечам:
+    4h:   2682 свечей
+    6h:   1788 свечей
+   12h:    894 свечей
+   24h:    447 свечей
+
+─── Фаза 2: бэктест ─────────────────────────────────────────────
+
+  Таймфрейм 4h  (2682 свечей)
+  -----------------------------------------------------------------
+  ✗ [  1/120] S01_strong_delta               n=    1  ret=  -0.88%  sh= +0.00  dd= -0.88%
+  ✗ [  2/120] S02_delta_accel                n=  223  ret= -27.75%  sh= -2.05  dd=-33.73%
+  ✗ [  3/120] S03_price_delta_momentum       n=  783  ret= -48.21%  sh= -1.19  dd=-54.37%
+  ✗ [  4/120] S04_delta_trend_3              n=   33  ret=  -5.38%  sh= -2.97  dd= -6.19%
+  ✗ [  5/120] S05_delta_turnover             n=  376  ret= -37.49%  sh= -1.72  dd=-45.09%
+  ✗ [  6/120] S06_delta_ratio_spike          n=   16  ret=  -2.55%  sh= -3.85  dd= -4.01%
+  ✗ [  7/120] S07_cum_delta_rising           n=  492  ret= -49.90%  sh= -2.23  dd=-53.07%
+  ✗ [  8/120] S08_multibar_delta_sum         n=  490  ret= -39.23%  sh= -1.39  dd=-44.18%
+  ✗ [  9/120] S09_two_pos_delta              n=  493  ret= -50.08%  sh= -2.25  dd=-53.07%
+  ✗ [ 10/120] S10_buy_vol_dominance          n=    1  ret=  -0.88%  sh= +0.00  dd= -0.88%
+  ✗ [ 11/120] S11_stacked_ask_3              n= 2596  ret= -95.34%  sh= -1.87  dd=-95.71%
+  ✗ [ 12/120] S12_stacked_ask_2_delta        n= 1183  ret= -69.17%  sh= -1.52  dd=-71.51%
+  ✗ [ 13/120] S13_ask_imb_vol_surge          n=  689  ret= -65.58%  sh= -2.09  dd=-68.68%
+  ✗ [ 14/120] S14_ask_imb_at_lows            n=  473  ret= -22.77%  sh= -0.76  dd=-32.74%
+  ✗ [ 15/120] S15_bid_exhaust_response       n= 1183  ret= -69.17%  sh= -1.52  dd=-71.51%
+  ✗ [ 16/120] S16_poc_breakout               n=  882  ret= -57.67%  sh= -1.48  dd=-59.98%
+  ✗ [ 17/120] S17_vah_breakout               n=  664  ret= -49.72%  sh= -1.51  dd=-53.44%
+  ✗ [ 18/120] S18_val_rejection              n=  643  ret= -46.49%  sh= -1.41  dd=-49.67%
+  ✗ [ 19/120] S19_poc_at_high                n=  296  ret= -34.36%  sh= -2.34  dd=-40.15%
+  ✗ [ 20/120] S20_poc_migration_up           n=  613  ret= -62.93%  sh= -2.77  dd=-63.96%
+  ✗ [ 21/120] S21_poc_breakout_stacked       n= 1369  ret= -72.91%  sh= -1.51  dd=-74.50%
+  ✗ [ 22/120] S22_close_above_vah            n=  328  ret= -14.53%  sh= -0.67  dd=-28.91%
+  ✗ [ 23/120] S23_near_val_with_delta        n=  196  ret= -12.58%  sh= -1.36  dd=-16.35%
+  ✗ [ 24/120] S24_volume_surge_bull          n=  179  ret=  -6.85%  sh= -0.47  dd=-14.67%
+  ✗ [ 25/120] S25_seller_exhaustion          n=  157  ret= -15.77%  sh= -1.41  dd=-22.29%
+  ✗ [ 26/120] S26_strong_close               n=  429  ret= -41.45%  sh= -1.84  dd=-43.55%
+  ✗ [ 27/120] S27_bullish_reversal           n=  346  ret= -35.58%  sh= -1.69  dd=-38.73%
+  ✗ [ 28/120] S28_inside_bar_coil            n=  225  ret= -22.15%  sh= -1.66  dd=-25.16%
+  ✗ [ 29/120] S29_range_expansion            n=  132  ret=  -3.72%  sh= -0.40  dd=-12.56%
+  ✗ [ 30/120] S30_composite                  n=  846  ret= -60.68%  sh= -1.68  dd=-63.95%
+
+  Таймфрейм 6h  (1788 свечей)
+  -----------------------------------------------------------------
+  ✗ [ 31/120] S01_strong_delta               n=    0  ret=  +0.00%  sh= +0.00  dd=  0.00%
+  ✗ [ 32/120] S02_delta_accel                n=  118  ret= -24.00%  sh= -3.48  dd=-25.11%
+  ✗ [ 33/120] S03_price_delta_momentum       n=  500  ret= -56.62%  sh= -2.24  dd=-59.27%
+  ✗ [ 34/120] S04_delta_trend_3              n=   22  ret=  -4.91%  sh= -3.73  dd= -6.06%
+  ✗ [ 35/120] S05_delta_turnover             n=  249  ret= -27.31%  sh= -1.81  dd=-35.50%
+  ✗ [ 36/120] S06_delta_ratio_spike          n=    2  ret=  -1.95%  sh=-78.34  dd= -1.95%
+  ✗ [ 37/120] S07_cum_delta_rising           n=  285  ret= -43.91%  sh= -2.66  dd=-45.73%
+  ✗ [ 38/120] S08_multibar_delta_sum         n=  319  ret= -33.22%  sh= -1.49  dd=-39.80%
+  ✗ [ 39/120] S09_two_pos_delta              n=  285  ret= -43.91%  sh= -2.66  dd=-45.73%
+  ✗ [ 40/120] S10_buy_vol_dominance          n=    0  ret=  +0.00%  sh= +0.00  dd=  0.00%
+  ✗ [ 41/120] S11_stacked_ask_3              n= 1734  ret= -86.82%  sh= -1.44  dd=-88.11%
+  ✗ [ 42/120] S12_stacked_ask_2_delta        n=  756  ret= -66.80%  sh= -1.88  dd=-70.56%
+  ✗ [ 43/120] S13_ask_imb_vol_surge          n=  481  ret= -35.21%  sh= -1.08  dd=-45.86%
+  ✗ [ 44/120] S14_ask_imb_at_lows            n=  298  ret= -38.88%  sh= -2.19  dd=-47.27%
+  ✗ [ 45/120] S15_bid_exhaust_response       n=  756  ret= -66.80%  sh= -1.88  dd=-70.56%
+  ✗ [ 46/120] S16_poc_breakout               n=  542  ret= -62.15%  sh= -2.50  dd=-65.05%
+  ✗ [ 47/120] S17_vah_breakout               n=  407  ret= -47.56%  sh= -2.19  dd=-52.28%
+  ✗ [ 48/120] S18_val_rejection              n=  391  ret= -46.42%  sh= -1.85  dd=-52.37%
+  ✗ [ 49/120] S19_poc_at_high                n=  191  ret=  -5.03%  sh= -0.32  dd=-25.41%
+  ✗ [ 50/120] S20_poc_migration_up           n=  395  ret= -57.02%  sh= -2.97  dd=-58.54%
+  ✗ [ 51/120] S21_poc_breakout_stacked       n=  913  ret= -67.44%  sh= -1.58  dd=-70.59%
+  ✗ [ 52/120] S22_close_above_vah            n=  191  ret= -45.60%  sh= -3.85  dd=-47.21%
+  ✗ [ 53/120] S23_near_val_with_delta        n=  129  ret=  -5.84%  sh= -0.64  dd=-10.86%
+  ✗ [ 54/120] S24_volume_surge_bull          n=  110  ret= -17.75%  sh= -2.18  dd=-19.11%
+  ✗ [ 55/120] S25_seller_exhaustion          n=  118  ret= -20.84%  sh= -2.15  dd=-24.46%
+  ✗ [ 56/120] S26_strong_close               n=  270  ret= -45.76%  sh= -2.92  dd=-49.38%
+  ✗ [ 57/120] S27_bullish_reversal           n=  210  ret= -14.33%  sh= -0.97  dd=-26.97%
+  ✗ [ 58/120] S28_inside_bar_coil            n=  149  ret= -17.15%  sh= -1.62  dd=-21.25%
+  ✗ [ 59/120] S29_range_expansion            n=  100  ret= -28.15%  sh= -4.11  dd=-29.81%
+  ✗ [ 60/120] S30_composite                  n=  524  ret= -53.45%  sh= -1.82  dd=-58.18%
+
+  Таймфрейм 12h  (894 свечей)
+  -----------------------------------------------------------------
+  ✗ [ 61/120] S01_strong_delta               n=    0  ret=  +0.00%  sh= +0.00  dd=  0.00%
+  ✗ [ 62/120] S02_delta_accel                n=   54  ret=  -2.73%  sh= -0.46  dd=-10.13%
+  ✗ [ 63/120] S03_price_delta_momentum       n=  228  ret= -49.01%  sh= -2.99  dd=-53.34%
+  ✓ [ 64/120] S04_delta_trend_3              n=   15  ret=  +9.17%  sh= +8.96  dd= -1.60%
+  ✗ [ 65/120] S05_delta_turnover             n=  115  ret= -34.38%  sh= -3.73  dd=-36.40%
+  ✗ [ 66/120] S06_delta_ratio_spike          n=    0  ret=  +0.00%  sh= +0.00  dd=  0.00%
+  ✗ [ 67/120] S07_cum_delta_rising           n=  139  ret=  -3.44%  sh= -0.16  dd=-16.62%
+  ✗ [ 68/120] S08_multibar_delta_sum         n=  151  ret= -22.21%  sh= -1.90  dd=-28.43%
+  ✗ [ 69/120] S09_two_pos_delta              n=  139  ret=  -3.44%  sh= -0.16  dd=-16.62%
+  ✗ [ 70/120] S10_buy_vol_dominance          n=    0  ret=  +0.00%  sh= +0.00  dd=  0.00%
+  ✗ [ 71/120] S11_stacked_ask_3              n=  874  ret= -71.77%  sh= -1.19  dd=-75.89%
+  ✗ [ 72/120] S12_stacked_ask_2_delta        n=  355  ret= -56.45%  sh= -2.42  dd=-60.17%
+  ✗ [ 73/120] S13_ask_imb_vol_surge          n=  255  ret= -19.69%  sh= -0.65  dd=-33.34%
+  ✗ [ 74/120] S14_ask_imb_at_lows            n=  140  ret= -21.49%  sh= -1.61  dd=-27.09%
+  ✗ [ 75/120] S15_bid_exhaust_response       n=  355  ret= -56.45%  sh= -2.42  dd=-60.17%
+  ✗ [ 76/120] S16_poc_breakout               n=  262  ret= -44.52%  sh= -2.17  dd=-49.53%
+  ✗ [ 77/120] S17_vah_breakout               n=  207  ret= -30.42%  sh= -1.69  dd=-38.41%
+  ✗ [ 78/120] S18_val_rejection              n=  165  ret= -39.15%  sh= -3.30  dd=-41.45%
+  ✗ [ 79/120] S19_poc_at_high                n=   88  ret= -23.04%  sh= -2.88  dd=-27.13%
+  ✗ [ 80/120] S20_poc_migration_up           n=  190  ret= -32.98%  sh= -1.91  dd=-35.54%
+  ✗ [ 81/120] S21_poc_breakout_stacked       n=  452  ret= -45.70%  sh= -1.20  dd=-54.34%
+  ✗ [ 82/120] S22_close_above_vah            n=   99  ret= -18.78%  sh= -2.20  dd=-21.90%
+  ✗ [ 83/120] S23_near_val_with_delta        n=   55  ret= -13.11%  sh= -3.06  dd=-13.25%
+  ✗ [ 84/120] S24_volume_surge_bull          n=   45  ret= -18.13%  sh= -4.82  dd=-18.93%
+  ✗ [ 85/120] S25_seller_exhaustion          n=   42  ret= -14.36%  sh= -3.94  dd=-15.86%
+  ✗ [ 86/120] S26_strong_close               n=  124  ret= -31.23%  sh= -2.96  dd=-34.23%
+  ✗ [ 87/120] S27_bullish_reversal           n=   91  ret= -23.33%  sh= -2.76  dd=-30.09%
+  ✗ [ 88/120] S28_inside_bar_coil            n=   66  ret= -25.32%  sh= -3.90  dd=-25.98%
+  ✗ [ 89/120] S29_range_expansion            n=   44  ret= -21.25%  sh= -5.07  dd=-22.73%
+  ✗ [ 90/120] S30_composite                  n=  238  ret= -33.92%  sh= -1.65  dd=-43.64%
+
+  Таймфрейм 24h  (447 свечей)
+  -----------------------------------------------------------------
+  ✗ [ 91/120] S01_strong_delta               n=    0  ret=  +0.00%  sh= +0.00  dd=  0.00%
+  ✗ [ 92/120] S02_delta_accel                n=   30  ret= -13.00%  sh= -5.38  dd=-15.15%
+  ✗ [ 93/120] S03_price_delta_momentum       n=  100  ret= -18.79%  sh= -1.50  dd=-21.89%
+  ✓ [ 94/120] S04_delta_trend_3              n=    7  ret=  +2.48%  sh= +5.11  dd= -1.44%
+  ✓ [ 95/120] S05_delta_turnover             n=   47  ret=  +2.56%  sh= +0.55  dd=-17.13%
+  ✗ [ 96/120] S06_delta_ratio_spike          n=    0  ret=  +0.00%  sh= +0.00  dd=  0.00%
+  ✗ [ 97/120] S07_cum_delta_rising           n=   72  ret= -20.00%  sh= -2.45  dd=-20.83%
+  ✓ [ 98/120] S08_multibar_delta_sum         n=   66  ret=  +6.13%  sh= +0.89  dd=-10.54%
+  ✗ [ 99/120] S09_two_pos_delta              n=   73  ret= -19.12%  sh= -2.30  dd=-20.83%
+  ✗ [100/120] S10_buy_vol_dominance          n=    0  ret=  +0.00%  sh= +0.00  dd=  0.00%
+  ✗ [101/120] S11_stacked_ask_3              n=  439  ret= -50.02%  sh= -0.85  dd=-57.62%
+  ✗ [102/120] S12_stacked_ask_2_delta        n=  159  ret= -14.45%  sh= -0.57  dd=-21.50%
+  ✓ [103/120] S13_ask_imb_vol_surge          n=  117  ret= +24.66%  sh= +1.36  dd=-17.74%
+  ✓ [104/120] S14_ask_imb_at_lows            n=   69  ret= +16.06%  sh= +1.80  dd=-16.29%
+  ✗ [105/120] S15_bid_exhaust_response       n=  159  ret= -14.45%  sh= -0.57  dd=-21.50%
+  ✗ [106/120] S16_poc_breakout               n=  125  ret= -29.39%  sh= -2.15  dd=-33.37%
+  ✗ [107/120] S17_vah_breakout               n=  102  ret= -20.11%  sh= -1.61  dd=-24.62%
+  ✗ [108/120] S18_val_rejection              n=   62  ret= -10.28%  sh= -1.23  dd=-17.29%
+  ✗ [109/120] S19_poc_at_high                n=   30  ret= -10.01%  sh= -2.06  dd=-15.28%
+  ✗ [110/120] S20_poc_migration_up           n=   94  ret= -34.39%  sh= -3.04  dd=-36.79%
+  ✗ [111/120] S21_poc_breakout_stacked       n=  230  ret= -38.28%  sh= -1.40  dd=-45.07%
+  ✗ [112/120] S22_close_above_vah            n=   46  ret=  -9.18%  sh= -1.63  dd=-14.13%
+  ✗ [113/120] S23_near_val_with_delta        n=   34  ret=  -7.53%  sh= -1.63  dd=-12.70%
+  ✓ [114/120] S24_volume_surge_bull          n=   13  ret= +14.09%  sh= +6.45  dd= -5.26%
+  ✗ [115/120] S25_seller_exhaustion          n=   11  ret=  -3.37%  sh= -1.37  dd=-12.11%
+  ✗ [116/120] S26_strong_close               n=   53  ret= -21.11%  sh= -3.13  dd=-26.91%
+  ✓ [117/120] S27_bullish_reversal           n=   36  ret=  +6.05%  sh= +1.72  dd= -4.77%
+  ✗ [118/120] S28_inside_bar_coil            n=   24  ret=  -8.11%  sh= -2.66  dd=-12.60%
+  ✗ [119/120] S29_range_expansion            n=   25  ret= -14.36%  sh= -2.98  dd=-19.37%
+  ✗ [120/120] S30_composite                  n=  113  ret=  -9.48%  sh= -0.53  dd=-24.07%
+
+─── Фаза 3: отчёт ───────────────────────────────────────────────
+
+CSV сохранён: results/backtest_results.csv
+График сохранён: results/equity_4h.png
+График сохранён: results/equity_6h.png
+График сохранён: results/equity_12h.png
+График сохранён: results/equity_24h.png
+
+═══════════════════════════════════════════════════════════════════════════════════════════════
+   TF  Стратегия                         Сделки    WR%   Доход%  Sharpe  MaxDD%     PF
+═══════════════════════════════════════════════════════════════════════════════════════════════
+  12h  S04_delta_trend_3                     15  60.0% +   9.17%  +8.962  -1.60%   4.07
+  24h  S24_volume_surge_bull                 13  76.9% +  14.09%  +6.452  -5.26%   3.33
+  24h  S04_delta_trend_3                      7  71.4% +   2.48%  +5.105  -1.44%   1.93
+  24h  S14_ask_imb_at_lows                   69  55.1% +  16.06%  +1.798 -16.29%   1.40
+  24h  S27_bullish_reversal                  36  66.7% +   6.05%  +1.718  -4.77%   1.32
+  24h  S13_ask_imb_vol_surge                117  55.6% +  24.66%  +1.357 -17.74%   1.27
+  24h  S08_multibar_delta_sum                66  51.5% +   6.13%  +0.892 -10.54%   1.17
+  24h  S05_delta_turnover                    47  57.4% +   2.56%  +0.553 -17.13%   1.11
+   4h  S01_strong_delta                       1   0.0%   -0.88%  +0.000  -0.88%   0.00
+   4h  S10_buy_vol_dominance                  1   0.0%   -0.88%  +0.000  -0.88%   0.00
+  12h  S07_cum_delta_rising                 139  43.9%   -3.44%  -0.162 -16.62%   0.97
+  12h  S09_two_pos_delta                    139  43.9%   -3.44%  -0.162 -16.62%   0.97
+   6h  S19_poc_at_high                      191  42.4%   -5.03%  -0.319 -25.41%   0.94
+   4h  S29_range_expansion                  132  49.2%   -3.72%  -0.399 -12.56%   0.93
+  12h  S02_delta_accel                       54  37.0%   -2.73%  -0.462 -10.13%   0.92
+   4h  S24_volume_surge_bull                179  47.5%   -6.85%  -0.473 -14.67%   0.91
+  24h  S30_composite                        113  50.4%   -9.48%  -0.526 -24.07%   0.91
+  24h  S12_stacked_ask_2_delta              159  48.4%  -14.45%  -0.570 -21.50%   0.90
+  24h  S15_bid_exhaust_response             159  48.4%  -14.45%  -0.570 -21.50%   0.90
+   6h  S23_near_val_with_delta              129  51.9%   -5.84%  -0.640 -10.86%   0.88
+  12h  S13_ask_imb_vol_surge                255  45.5%  -19.69%  -0.645 -33.34%   0.89
+   4h  S22_close_above_vah                  328  45.4%  -14.53%  -0.665 -28.91%   0.88
+   4h  S14_ask_imb_at_lows                  473  44.2%  -22.77%  -0.757 -32.74%   0.87
+  24h  S11_stacked_ask_3                    439  46.2%  -50.02%  -0.853 -57.62%   0.86
+   6h  S27_bullish_reversal                 210  47.1%  -14.33%  -0.971 -26.97%   0.84
+   6h  S13_ask_imb_vol_surge                481  47.8%  -35.21%  -1.077 -45.86%   0.82
+   4h  S03_price_delta_momentum             783  43.4%  -48.21%  -1.188 -54.37%   0.80
+  12h  S11_stacked_ask_3                    874  45.1%  -71.77%  -1.193 -75.89%   0.80
+  12h  S21_poc_breakout_stacked             452  44.0%  -45.70%  -1.198 -54.34%   0.80
+  24h  S18_val_rejection                     62  48.4%  -10.28%  -1.227 -17.29%   0.81
+   4h  S23_near_val_with_delta              196  45.9%  -12.58%  -1.356 -16.35%   0.78
+  24h  S25_seller_exhaustion                 11  54.5%   -3.37%  -1.366 -12.11%   0.78
+   4h  S08_multibar_delta_sum               490  44.1%  -39.23%  -1.385 -44.18%   0.76
+  24h  S21_poc_breakout_stacked             230  44.8%  -38.28%  -1.396 -45.07%   0.78
+   4h  S25_seller_exhaustion                157  45.9%  -15.77%  -1.409 -22.29%   0.76
+   4h  S18_val_rejection                    643  42.6%  -46.49%  -1.411 -49.67%   0.76
+   6h  S11_stacked_ask_3                   1734  43.7%  -86.82%  -1.440 -88.11%   0.76
+   4h  S16_poc_breakout                     882  42.7%  -57.67%  -1.477 -59.98%   0.76
+   6h  S08_multibar_delta_sum               319  41.4%  -33.22%  -1.489 -39.80%   0.75
+  24h  S03_price_delta_momentum             100  49.0%  -18.79%  -1.496 -21.89%   0.77
+   4h  S21_poc_breakout_stacked            1369  42.4%  -72.91%  -1.509 -74.50%   0.75
+   4h  S17_vah_breakout                     664  42.8%  -49.72%  -1.513 -53.44%   0.75
+   4h  S12_stacked_ask_2_delta             1183  42.8%  -69.17%  -1.521 -71.51%   0.75
+   4h  S15_bid_exhaust_response            1183  42.8%  -69.17%  -1.521 -71.51%   0.75
+   6h  S21_poc_breakout_stacked             913  42.3%  -67.44%  -1.580 -70.59%   0.74
+  24h  S17_vah_breakout                     102  47.1%  -20.11%  -1.612 -24.62%   0.75
+  12h  S14_ask_imb_at_lows                  140  40.7%  -21.49%  -1.614 -27.09%   0.76
+   6h  S28_inside_bar_coil                  149  46.3%  -17.15%  -1.617 -21.25%   0.73
+  24h  S23_near_val_with_delta               34  41.2%   -7.53%  -1.626 -12.70%   0.75
+  24h  S22_close_above_vah                   46  47.8%   -9.18%  -1.632 -14.13%   0.77
+═══════════════════════════════════════════════════════════════════════════════════════════════
+
+  ЛУЧШАЯ СТРАТЕГИЯ ПО КАЖДОМУ ТАЙМФРЕЙМУ (по Sharpe, min 10 сделок):
+    4h: S29_range_expansion              ret=-3.72%  sh=-0.399  wr=49.2%  n=132
+    6h: S19_poc_at_high                  ret=-5.03%  sh=-0.319  wr=42.4%  n=191
+   12h: S04_delta_trend_3                ret=+9.17%  sh=8.962  wr=60.0%  n=15
+   24h: S24_volume_surge_bull            ret=+14.09%  sh=6.452  wr=76.9%  n=13
+
+Все файлы в папке: /home/adlet/worksoft/backtest_strategy_ob_t6/results/
